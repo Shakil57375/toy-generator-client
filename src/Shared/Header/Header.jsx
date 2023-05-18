@@ -28,7 +28,7 @@ const Header = () => {
     </div>
   return (
     <div>
-      <div className="navbar lg:pt-10 pt-5 lg:pb-6 pb-3 lg:px-8 shadow-xl">
+      <div className="navbar lg:pt-10 pt-5 lg:pb-6 pb-3 lg:px-8 shadow-xl mb-12">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -54,7 +54,7 @@ const Header = () => {
               {items}
             </ul>
           </div>
-          <Link to="/" className="btn btn-ghost normal-case text-xl">SportyKidz</Link>
+          <Link to="/"><img src="https://i.ibb.co/c6StNVR/sporty-Kids.png" alt="" className="w-20 h-16" /></Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
