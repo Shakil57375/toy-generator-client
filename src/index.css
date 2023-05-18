@@ -1,14 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 .my-container {
-    @apply px-4  py-16 mx-auto w-full  md:px-24 lg:px-36 lg:pt-20
+    @apply px-4 py-16 mx-auto w-full md:px-24 lg:px-36 lg:pt-20
 }
 
 .d-btn {
-    @apply bg-gradient-to-r from-purple-500 to-pink-500   btn text-white 
+    @apply bg-gradient-to-r from-teal-500 to-cyan-600 text-white transition duration-300 ease-in-out hover:bg-green-500;
 }
 
-.d-btn:hover{
-    @apply bg-gradient-to-r from-pink-500 to-purple-500
+.d-btn:hover {
+    @apply bg-gradient-to-r from-teal-500 to-cyan-600 text-white ;
 }

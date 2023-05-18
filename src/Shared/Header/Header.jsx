@@ -1,13 +1,30 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Header = () => {
+  const {user, logOut} = useContext(AuthContext)
+
+  const handleLogOut = () =>{
+    logOut()
+    .then(result =>{
+      const loggedUser = result.user
+      console.log(loggedUser);
+    })
+    .catch(error =>{
+      console.log(error.message);
+    })
+  }
     const items = <div className="flex flex-col lg:flex-row gap-5">
         <Link className="text-lg text-gray-700" to="/">Home</Link>
         <Link className="text-lg text-gray-700" to="/allToys">All Toys</Link>
-        <Link className="text-lg text-gray-700" to="/myToys">My Toys</Link>
-        <Link className="text-lg text-gray-700" to="/AddToy">Add a Toy</Link>
         <Link className="text-lg text-gray-700" to="/blogs">Blogs</Link>
-        <Link className="text-lg text-gray-700" to="/login">Login</Link>
+        {
+          user?.email ? <><Link className="text-lg text-gray-700" to="/myToys">My Toys</Link>
+          <Link className="text-lg text-gray-700" to="/AddToy">Add a Toy</Link></> : <Link className="text-lg text-gray-700" to="/login">Login</Link>
+        }
+        
+        
     </div>
   return (
     <div>
@@ -37,7 +54,7 @@ const Header = () => {
               {items}
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-xl">SportyKidz</a>
+          <Link to="/" className="btn btn-ghost normal-case text-xl">SportyKidz</Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -45,7 +62,13 @@ const Header = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Get started</a>
+          {
+            user?.email ? <div className="flex gap-2 cursor-pointer">
+            <span className='text-white mr-0 lg:mr-3 '> <img src={user.photoURL} title = {user.displayName ? user.displayName : " "} width={50} height={50} className="rounded-full" alt="" /></span>
+            <button className="d-btn btn" onClick={handleLogOut}>Sign Out</button>
+          </div> : " "
+          }
+          
         </div>
       </div>
     </div>
