@@ -101,15 +101,13 @@ const Register = () => {
               />
             </div>
             <div className="form-control mt-6">
-              <input className="btn btn-primary" type="submit" value="Login" />
+              <input className="btn d-btn btn-primary" type="submit" value="Register" />
             </div>
-            <label className="label">
-              <a href="#" className="label-text-alt link link-hover">
-                Have an account?{" "}
-                <Link to="/login" className="text-info">
+            <label className="text-base">
+                Have an account? Please{" "}
+                <Link to="/login" className="text-blue-800 font-semibold">
                   Login
                 </Link>
-              </a>
             </label>
           </form>
         </div>

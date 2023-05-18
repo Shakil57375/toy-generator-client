@@ -24,7 +24,6 @@ const Header = () => {
           <Link className="text-lg text-gray-700" to="/AddToy">Add a Toy</Link></> : <Link className="text-lg text-gray-700" to="/login">Login</Link>
         }
         
-        
     </div>
   return (
     <div>

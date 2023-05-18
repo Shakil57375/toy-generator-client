@@ -66,7 +66,7 @@ const Login = () => {
               />
             </div>
             <div className="form-control mt-6">
-              <input className="btn btn-primary" type="submit" value="Login" />
+              <input className="btn d-btn btn-primary" type="submit" value="Login" />
             </div>
             <div className="divider">OR</div>
             <div className="mb-3">
@@ -77,13 +77,11 @@ const Login = () => {
                 alt=""
               />
             </div>
-            <label className="label">
-              <a href="#" className="label-text-alt link link-hover">
+            <label>
                 New to the SportyKidz? Please{" "}
-                <Link to="/register" className="text-info">
+                <Link to="/register" className="text-blue-700 font-semibold">
                   Register
                 </Link>
-              </a>
             </label>
           </form>
         </div>
