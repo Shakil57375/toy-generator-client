@@ -1,9 +1,12 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Login = () => {
   const {handleLogin, handleGoogleSignIn} = useContext(AuthContext)
+  const location = useLocation()
+  const navigate = useNavigate()
+  const from = location.state?.from?.pathname || "/";
   const handleSignIn = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -13,8 +16,9 @@ const Login = () => {
     handleLogin(email,password)
     .then(result =>{
         const user = result.user
-        console.log(user)
         alert("user logged in successfully")
+        console.log(user)
+        navigate(from, {replace : true});
     })
     .catch(error =>{
         console.log(error.message);
@@ -26,6 +30,7 @@ const Login = () => {
         const loggedUser = result.user
         console.log(loggedUser);
         alert("logged in successfully")
+        navigate(from, {replace : true});
     })
     .catch(error =>{
         console.log(error.message);
