@@ -42,7 +42,7 @@ const AddToy = () => {
             <input
               placeholder="Type here"
               className="input mt-2 mr-6 input-bordered input-accent w-full"
-              {...register("firstName")}
+              {...register("ToyName")}
             />
           </div>
           <div className="lg:w-1/2 w-full">
