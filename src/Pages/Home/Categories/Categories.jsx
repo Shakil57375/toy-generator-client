@@ -1,15 +1,15 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/jsx-key */
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 const Categories = () => {
   const [activeToy, setActiveToy] = useState("cricket");
   const [toys, setToys] = useState([]);
   useEffect(() => {
     fetch(`http://localhost:5000/toys/${activeToy}`)
       .then((res) => res.json())
-      .then((data) =>  setToys(data));
+      .then((data) => setToys(data));
   }, [activeToy]);
-  console.log(toys)
   const handleTabClick = (tabName) => {
     setActiveToy(tabName);
   };
@@ -53,13 +53,19 @@ const Categories = () => {
               <img src={toy.image} className="w-56 h-60" alt="Shoes" />
             </figure>
             <div className="px-10 py-12">
-              <h2 className="card-title text-2xl font-bold text-center my-4">Toy Name: {toy.ToyName}</h2>
+              <h2 className="card-title text-2xl font-bold text-center my-4">
+                Toy Name: {toy.ToyName}
+              </h2>
               <div className="flex justify-between items-center mb-10">
                 <p className="text-lg font-semibold">Price : {toy.price}</p>
                 <p className="text-lg font-semibold">Rating : {toy.rating}</p>
               </div>
               <div className="card-actions justify-center">
-                <button className="btn btn-primary absolute bottom-5">Details</button>
+                <Link to={`SingleToys/${toy._id}`}>
+                  <button className="btn d-btn btn-primary absolute bottom-5">
+                    Details
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

@@ -6,6 +6,11 @@
     @apply px-4 py-16 mx-auto w-full md:px-24 lg:px-36 lg:pt-20
 }
 
+.font-custom {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+
 .d-btn {
     @apply bg-gradient-to-r from-teal-500 to-cyan-600 text-white transition duration-300 ease-in-out hover:bg-green-500;
 }
