@@ -12,7 +12,7 @@ const UpdateToys = () => {
   } = useForm();
   const onSubmit = (data) => {
     console.log(data);
-    fetch(`http://localhost:5000/updateToys/${data.id}`, {
+    fetch(`https://toy-generator-server.vercel.app/updateToys/${data.id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

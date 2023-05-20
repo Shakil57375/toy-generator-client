@@ -8,7 +8,7 @@ const Categories = () => {
   const [activeToy, setActiveToy] = useState("cricket");
   const [toys, setToys] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/toys/${activeToy}`)
+    fetch(`https://toy-generator-server.vercel.app/toys/${activeToy}`)
       .then((res) => res.json())
       .then((data) => setToys(data));
   }, [activeToy]);

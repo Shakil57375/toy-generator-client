@@ -13,7 +13,7 @@ const AddToy = () => {
   } = useForm();
   const onSubmit = (data) => {
     console.log(data)
-    fetch("http://localhost:5000/toys",{
+    fetch("https://toy-generator-server.vercel.app/toys",{
       method : "POST",
       headers : {
       "content-type" : "application/json"

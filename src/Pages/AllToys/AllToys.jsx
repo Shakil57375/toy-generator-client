@@ -6,12 +6,12 @@ const AllToys = () => {
   const [toys, setToys] = useState([]);
   const [searchName, setSearchName] = useState(" ");
   useEffect(() => {
-    fetch("http://localhost:5000/toys")
+    fetch("https://toy-generator-server.vercel.app/toys")
       .then((res) => res.json())
       .then((data) => setToys(data));
   }, []);
   const handleSearch = () => {
-    fetch(`http://localhost:5000/toySearchByToyName/${searchName}`)
+    fetch(`https://toy-generator-server.vercel.app/toySearchByToyName/${searchName}`)
       .then((res) => res.json())
       .then((data) => {
         setToys(data);
