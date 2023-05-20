@@ -5,11 +5,7 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
-      fontFamily: {
-        custom: ['Raleway', 'sans-serif'], // Replace 'Roboto' with the desired font name
-      },
-    },
+    extend: {},
   },
   plugins: [require("daisyui")],
 }

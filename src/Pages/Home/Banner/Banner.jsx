@@ -3,13 +3,13 @@ const Banner = () => {
     <div>
       <div className="flex lg:flex-row flex-col-reverse  gap-10 items-center justify-between pb-10 px-6 md:pb-16 md:px-12 lg:px-10">
         <div className="w-full md:w-1/2 lg:w-5/12">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl  font-bold mb-4">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-Marcellus mb-4">
           SportyKidz
           </h1>
-          <h2 className="text-xl md:text-2xl lg:text-3xl  mb-6">
+          <h2 className="text-lg md:text-xl lg:text-2xl font-semibold font-Marcellus  mb-4">
             Find Your Perfect Sports Toy
           </h2>
-          <p className="text-lg md:text-xl lg:text-2xl ">
+          <p className="font-Poppins text-base ">
             Welcome to SportyKidz! We offer a wide range of sports toys
             for kids of all ages. Whether you are looking for soccer balls,
             basketball hoops, or tennis racquets, we have it all. Explore our

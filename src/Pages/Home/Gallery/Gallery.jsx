@@ -42,7 +42,7 @@ const Gallery = () => {
 
   return (
     <div className = "my-12">
-      <h2 className=" my-12 text-center text-5xl font-bold">Our Gallery</h2>
+      <h2 className=" my-12 text-center text-5xl font-bold font-Marcellus">Our Gallery</h2>
       <Slider className="flex gap-3" ref={sliderRef} {...settings}>
         <div>
           <img src="https://5.imimg.com/data5/PL/HD/MY-28816385/plastic-cricket-bat-500x500.jpg" alt="Image 1" className="slider-image h-64" />

@@ -14,8 +14,8 @@ const Categories = () => {
     setActiveToy(tabName);
   };
   return (
-    <div>
-      <h3 className="text-5xl font-bold text-center my-10">
+    <div className="mb-10">
+      <h3 className="text-5xl font-bold text-center font-Marcellus my-10">
         Search By Categories
       </h3>
       <div className="flex justify-start items-center mb-10">
@@ -60,9 +60,9 @@ const Categories = () => {
                 <p className="text-lg font-semibold">Price : {toy.price}</p>
                 <p className="text-lg font-semibold">Rating : {toy.rating}</p>
               </div>
-              <div className="card-actions justify-center">
+              <div className=" absolute bottom-5 left-40">
                 <Link to={`SingleToys/${toy._id}`}>
-                  <button className="btn d-btn btn-primary absolute bottom-5">
+                  <button className="btn d-btn btn-primary ">
                     Details
                   </button>
                 </Link>

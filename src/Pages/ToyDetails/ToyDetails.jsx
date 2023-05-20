@@ -21,7 +21,7 @@ const ToyDetails = () => {
           <img src={image} alt="Toy" className="h-[500px] w-full" />
         </div>
         <div className="w-full p-4">
-          <h2 className="text-5xl font-thin font-custom mb-2 divide-y-2">{ToyName}</h2>
+          <h2 className="text-5xl font-light font-Marcellus mb-2 divide-y-2">{ToyName}</h2>
           <p className="text-xl font-bold my-4">Price: $ {price}</p>
           <div className="flex items-center my-4 gap-5">
             <Rating style={{ maxWidth: 140 }} value= {Math.round(rating)} readOnly />

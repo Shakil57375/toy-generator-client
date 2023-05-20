@@ -1,20 +1,19 @@
 /* eslint-disable react/jsx-key */
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const AllToys = () => {
-    const [toys, setToys] = useState([])
-    useEffect(()=>{
-        fetch("http://localhost:5000/toys")
-        .then(res => res.json())
-        .then(data => setToys(data))
-    },[])
-    return (
-        <div>
-            <p>All Toys coming {toys.length}</p>
-
-            <div className="overflow-x-auto w-full">
-  <table className="table w-full">
-  <thead>
+  const [toys, setToys] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:5000/toys")
+      .then((res) => res.json())
+      .then((data) => setToys(data));
+  }, []);
+  return (
+    <div>
+      <div className="overflow-x-auto w-full">
+        <table className="table w-full">
+          <thead>
             <tr>
               <th>ID</th>
               <th>Seller Name</th>
@@ -26,24 +25,26 @@ const AllToys = () => {
             </tr>
           </thead>
           <tbody>
-            {toys?.map((tas, index) => (
+            {toys?.map((toy, index) => (
               <tr>
                 <td>{index + 1}</td>
-                <td>{tas.sellerName}</td>
-                <td>{tas.ToyName}</td>
-                <td>{tas.category}</td>
-                <td>{tas.price}</td>
-                <td>{tas.quantity}</td>
+                <td>{toy.sellerName}</td>
+                <td>{toy.ToyName}</td>
+                <td>{toy.category}</td>
+                <td>{toy.price}</td>
+                <td>{toy.quantity}</td>
                 <td>
-                  <button className="btn d-btn">Details</button>
+                  <Link to={`/SingleToys/${toy._id}`}>
+                    <button className="btn d-btn">Details</button>
+                  </Link>
                 </td>
               </tr>
             ))}
           </tbody>
-  </table>
-</div>
-        </div>
-    );
+        </table>
+      </div>
+    </div>
+  );
 };
 
 export default AllToys;

@@ -118,7 +118,7 @@ const AddToy = () => {
         <div className="w-full text-center mt-5">
           <input
             className="btn btn-primary "
-            value="Add you toy"
+            value="Add your toy"
             type="submit"
           />
         </div>
