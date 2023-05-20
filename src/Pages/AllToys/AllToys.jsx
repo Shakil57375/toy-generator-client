@@ -26,7 +26,7 @@ const AllToys = () => {
           </thead>
           <tbody>
             {toys?.map((toy, index) => (
-              <tr>
+              <tr key={toy._id}>
                 <td>{index + 1}</td>
                 <td>{toy.sellerName}</td>
                 <td>{toy.ToyName}</td>

@@ -11,7 +11,16 @@ const MyToys = () => {
         .then(data => setToys(data))
     },[user?.email])
     const handleDeleteToy = (id) =>{
-        console.log(id)
+        fetch(`http://localhost:5000/singleToys/${id}`,{
+            method : "DELETE"
+        })
+        .then(res => res.json())
+        .then(data =>{
+            console.log(data);
+            const remaining = toys.filter(toy => toy._id !== id)
+            setToys(remaining)
+            alert("successfully deleted")
+        })
     }
     return (
         <div>
@@ -30,7 +39,7 @@ const MyToys = () => {
           </thead>
           <tbody>
             {toys?.map((toy, index) => (
-              <tr>
+              <tr key={toy._id}>
                 <td>{index + 1}</td>
                 <td>{toy.sellerName}</td>
                 <td>{toy.ToyName}</td>
