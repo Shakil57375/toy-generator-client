@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { useContext } from "react";
+import Swal from 'sweetalert2'
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../Provider/AuthProvider";
 const AddToy = () => {
@@ -22,7 +23,13 @@ const AddToy = () => {
     .then(res => res.json())
     .then(data => {
       console.log(data)
-      alert("successfully added")
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Your toy has been successfully added',
+        showConfirmButton: false,
+        timer: 1500
+      })
     })
   };
   return (
@@ -115,7 +122,7 @@ const AddToy = () => {
             />
           </div>
         </div>
-        <div className="w-full text-center mt-5">
+        <div className="w-full text-center my-5">
           <input
             className="btn btn-primary "
             value="Add your toy"

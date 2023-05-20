@@ -61,7 +61,7 @@ const Categories = () => {
                 <p className="text-lg font-semibold">Rating : {toy.rating}</p>
               </div>
               <div className=" absolute bottom-5 left-40">
-                <Link to={`SingleToys/${toy._id}`}>
+                <Link to={`/SingleToys/${toy._id}`}>
                   <button className="btn d-btn btn-primary ">
                     Details
                   </button>
