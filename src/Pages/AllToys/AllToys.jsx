@@ -4,13 +4,32 @@ import { Link } from "react-router-dom";
 
 const AllToys = () => {
   const [toys, setToys] = useState([]);
+  const [searchName, setSearchName] = useState(" ");
   useEffect(() => {
     fetch("http://localhost:5000/toys")
       .then((res) => res.json())
       .then((data) => setToys(data));
   }, []);
+  const handleSearch = () => {
+    fetch(`http://localhost:5000/toySearchByToyName/${searchName}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setToys(data);
+      });
+  };
   return (
     <div>
+      <div className="w-full  text-center mb-5">
+        <input
+          onChange={(event) => setSearchName(event.target.value)}
+          type="text"
+          placeholder="Search by name"
+          className="input input-bordered mr-4 input-info w-full mx-auto max-w-xs"
+        />
+        <button onClick = {handleSearch} className="btn btn-outline btn-info">
+          Search
+        </button>
+      </div>
       <div className="overflow-x-auto w-full">
         <table className="table w-full">
           <thead>

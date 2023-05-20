@@ -2,6 +2,8 @@
 /* eslint-disable react/jsx-key */
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { Rating } from '@smastrom/react-rating'
+import '@smastrom/react-rating/style.css'
 const Categories = () => {
   const [activeToy, setActiveToy] = useState("cricket");
   const [toys, setToys] = useState([]);
@@ -54,11 +56,11 @@ const Categories = () => {
             </figure>
             <div className="px-10 py-12">
               <h2 className="card-title text-2xl font-bold text-center my-4">
-                Toy Name: {toy.ToyName}
+                {toy.ToyName}
               </h2>
               <div className="flex justify-between items-center mb-10">
-                <p className="text-lg font-semibold">Price : {toy.price}</p>
-                <p className="text-lg font-semibold">Rating : {toy.rating}</p>
+                <p className="text-lg font-semibold">Price :$ {toy.price}</p>
+                <Rating style={{ maxWidth: 140 }} value= {Math.round(toy.rating)} readOnly />
               </div>
               <div className=" absolute bottom-5 left-40">
                 <Link to={`/SingleToys/${toy._id}`}>
