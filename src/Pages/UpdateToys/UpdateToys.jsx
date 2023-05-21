@@ -2,7 +2,9 @@
 import Swal from "sweetalert2";
 import { useForm } from "react-hook-form";
 import { useParams } from "react-router-dom";
+import { useTitle } from "../../CustomHook/CustomHook";
 const UpdateToys = () => {
+  useTitle("update toy")
   const id = useParams();
   const {
     register,

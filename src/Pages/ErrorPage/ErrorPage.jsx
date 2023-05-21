@@ -1,9 +1,11 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useTitle } from '../../CustomHook/CustomHook';
 
 const ErrorPage = () => {
     // eslint-disable-next-line no-undef
+    useTitle("error")
     const navigate = useNavigate()
     const handleGoBack = () =>{
         navigate("/")

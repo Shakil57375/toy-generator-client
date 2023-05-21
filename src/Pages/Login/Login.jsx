@@ -1,9 +1,11 @@
 import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { useTitle } from "../../CustomHook/CustomHook";
 
 const Login = () => {
   const {handleLogin, handleGoogleSignIn} = useContext(AuthContext)
+  useTitle("login")
   const location = useLocation()
   const navigate = useNavigate()
   const from = location.state?.from?.pathname || "/";

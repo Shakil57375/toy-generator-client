@@ -1,10 +1,12 @@
 /* eslint-disable react/jsx-key */
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useTitle } from "../../CustomHook/CustomHook";
 
 const AllToys = () => {
   const [toys, setToys] = useState([]);
   const [searchName, setSearchName] = useState(" ");
+  useTitle("All Toys")
   useEffect(() => {
     fetch("https://toy-generator-server.vercel.app/toys")
       .then((res) => res.json())
