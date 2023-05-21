@@ -1,4 +1,6 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { useTitle } from "../../CustomHook/CustomHook";
@@ -8,6 +10,11 @@ const Login = () => {
   useTitle("login")
   const location = useLocation()
   const navigate = useNavigate()
+  useEffect(() => {
+    AOS.init({
+      duration:1200,
+    });
+  }, []);
   const from = location.state?.from?.pathname || "/";
   const handleSignIn = (event) => {
     event.preventDefault();
@@ -39,7 +46,7 @@ const Login = () => {
     })
   };
   return (
-    <div className="hero min-h-min bg-base-200 py-10">
+    <div data-aos='zoom-in' className="hero min-h-min bg-base-200 py-10">
       <div className="hero-content flex-col lg:flex-row gap-5 lg:gap-10">
         <div className="text-center lg:text-left">
           <img

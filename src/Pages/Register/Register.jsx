@@ -1,11 +1,18 @@
 import { Link, useNavigate } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { AuthContext } from "../../Provider/AuthProvider";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { useTitle } from "../../CustomHook/CustomHook";
 const Register = () => {
   const { handleRegister, updateUser, logOut } = useContext(AuthContext);
   // console.log(handleRegister);
   useTitle("Register")
+  useEffect(() => {
+    AOS.init({
+      duration:1200,
+    });
+  }, []);
   const navigate = useNavigate();
   const handleSignUp = (event) => {
     event.preventDefault();
@@ -47,7 +54,7 @@ const Register = () => {
     };
   };
   return (
-    <div className="hero min-h-min bg-base-200 py-10">
+    <div data-aos='zoom-in' className="hero min-h-min bg-base-200 py-10">
       <div className="hero-content flex-col lg:flex-row gap-5 lg:gap-10">
         <div className="text-center lg:text-left">
           <img

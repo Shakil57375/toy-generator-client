@@ -1,9 +1,16 @@
 /* eslint-disable react/jsx-key */
 import { useEffect, useState } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { Link } from "react-router-dom";
 import { useTitle } from "../../CustomHook/CustomHook";
 
 const AllToys = () => {
+  useEffect(() => {
+    AOS.init({
+      duration:1200,
+    });
+  }, []);
   const [toys, setToys] = useState([]);
   const [searchName, setSearchName] = useState(" ");
   useTitle("All Toys")
@@ -20,7 +27,7 @@ const AllToys = () => {
       });
   };
   return (
-    <div>
+    <div data-aos='zoom-in'>
       <div className="w-full  text-center mb-5">
         <input
           onChange={(event) => setSearchName(event.target.value)}

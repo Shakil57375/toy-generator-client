@@ -35,7 +35,7 @@ const AddToy = () => {
     })
   };
   return (
-    <div>
+    <div data-aos='zoom-in'>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="my-5">
         <label className="text-xl  font-semibold">Toy image url :</label>

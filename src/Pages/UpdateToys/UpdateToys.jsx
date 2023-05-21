@@ -1,9 +1,17 @@
 /* eslint-disable no-unused-vars */
 import Swal from "sweetalert2";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useParams } from "react-router-dom";
 import { useTitle } from "../../CustomHook/CustomHook";
 const UpdateToys = () => {
+  useEffect(() => {
+    AOS.init({
+      duration:1200,
+    });
+  }, []);
   useTitle("update toy")
   const id = useParams();
   const {
@@ -12,6 +20,7 @@ const UpdateToys = () => {
     watch,
     formState: { errors },
   } = useForm();
+  
   const onSubmit = (data) => {
     console.log(data);
     fetch(`https://toy-generator-server.vercel.app/updateToys/${data.id}`, {
@@ -34,7 +43,7 @@ const UpdateToys = () => {
       });
   };
   return (
-    <div>
+    <div data-aos='zoom-in'>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="flex justify-between mt-3 gap-5 items-center">
           <div className="lg:w-1/2 w-full">

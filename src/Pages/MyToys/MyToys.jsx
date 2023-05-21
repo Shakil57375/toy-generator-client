@@ -1,12 +1,19 @@
 /* eslint-disable react/jsx-key */
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
 import { useTitle } from "../../CustomHook/CustomHook";
 
 const MyToys = () => {
   useTitle("My Toys")
+  useEffect(() => {
+    AOS.init({
+      duration:1200,
+    });
+  }, []);
   const { user } = useContext(AuthContext);
   const [toys, setToys] = useState([]);
   useEffect(() => {
@@ -40,7 +47,7 @@ const MyToys = () => {
     });
   };
   return (
-    <div>
+    <div data-aos='zoom-in'>
       <div className="overflow-x-auto lg:w-full">
         <table className="table w-full">
           <thead>

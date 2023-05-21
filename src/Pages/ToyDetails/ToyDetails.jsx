@@ -1,10 +1,18 @@
 import { useLoaderData } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
 import "../../../src/index.css";
 import { useTitle } from "../../CustomHook/CustomHook";
+import { useEffect } from "react";
 const ToyDetails = () => {
   useTitle("Toy details")
+  useEffect(() => {
+    AOS.init({
+      duration:1200,
+    });
+  }, []);
   const ToyInfos = useLoaderData();
   const {
     image,
@@ -17,7 +25,7 @@ const ToyDetails = () => {
     description,
   } = ToyInfos;
   return (
-    <div className="w-full mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+    <div data-aos='zoom-in' className="w-full mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
       <div className="flex lg:flex-row flex-col items-center justify-between">
         <div className="w-full">
           <img src={image} alt="Toy" className="h-[500px] w-full" />

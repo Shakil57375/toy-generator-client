@@ -49,92 +49,85 @@ const Gallery = () => {
   };
 
   return (
-    <div data-aos='zoom-in' className="my-12">
+    <div data-aos='zoom-in' >
       <h2 className=" my-12 text-center text-5xl font-bold font-Marcellus">
         Our Gallery
       </h2>
-      <Slider className="flex gap-3" ref={sliderRef} {...settings}>
-        <div>
+      <Slider ref={sliderRef} {...settings}>
+        <div className="bg-cyan-600 ">
           <img
-            src="https://5.imimg.com/data5/PL/HD/MY-28816385/plastic-cricket-bat-500x500.jpg"
+            src="https://img.freepik.com/free-photo/real-leather-colorful-multi-colour-soccer-ball-green-grass_1232-3039.jpg?size=626&ext=jpg&ga=GA1.1.2093528427.1639985653&semt=ais"
             alt="Image 1"
-            className="slider-image h-64"
+            className="slider-image h-96 p-3 ml-2 "
           />
         </div>
-        <div>
+        <div className="bg-cyan-600 ">
           <img
-            src="https://static-01.daraz.com.bd/p/41f3ac447fa1dfce73e3c4a65da7a71e.jpg_720x720.jpg_.webp"
+            src="https://img.freepik.com/free-photo/front-view-new-football-pedestal-with-copy-space_23-2148796899.jpg?w=996&t=st=1684663710~exp=1684664310~hmac=cd193cb29fc555953b9febfc2b0ec6fe69dd46ef7a3442e331216b101000d20a"
             alt="Image 1"
-            className="slider-image h-64"
+            className="slider-image h-96 p-3 "
           />
         </div>
-        <div>
+        <div className="bg-cyan-600 ">
           <img
-            src="https://m.media-amazon.com/images/I/41phuNW1hUL.jpg"
+            src="https://img.freepik.com/free-photo/flat-lay-composition-toys_23-2148144819.jpg?size=626&ext=jpg&ga=GA1.1.2093528427.1639985653&semt=ais"
             alt="Image 1"
-            className="slider-image h-64"
+            className="slider-image h-96 p-3 "
           />
         </div>
-        <div>
+        <div className="bg-cyan-600 ">
           <img
-            src="https://static-01.daraz.com.bd/original/69f1f7eb6da9a7254a2b30165f835a06.jpg"
-            alt="Image 1"
-            className="slider-image h-64"
+            src="https://img.freepik.com/premium-photo/black-white-soccer-ball-with-shadow-gray-background-3d-render_308595-101.jpg?w=996"
+            className="slider-image h-96 p-3 "
           />
         </div>
-        <div>
+        <div className="bg-cyan-600 ">
           <img
-            src="https://image.smythstoys.com/picture/desktop/128155.jpg"
-            className="slider-image h-64"
+            src="https://img.freepik.com/free-photo/tennis-bats-with-shuttlecock-ball-yellow-background_23-2148153884.jpg?size=626&ext=jpg&ga=GA1.1.2093528427.1639985653&semt=ais"
+            alt="Image 1"
+            className="slider-image h-96 p-3 "
           />
         </div>
-        <div>
+        <div className="bg-cyan-600 ">
           <img
-            src="https://images-na.ssl-images-amazon.com/images/I/51IOEbFXskL._AC_UL600_SR600,600_.jpg"
+            src="https://img.freepik.com/free-photo/boy-with-badminton-rackets-outdoors_155003-13781.jpg?size=626&ext=jpg&ga=GA1.2.2093528427.1639985653&semt=ais"
             alt="Image 1"
-            className="slider-image h-64"
+            className="slider-image h-96 p-3 "
           />
         </div>
-        <div>
+        <div className="bg-cyan-600 ">
           <img
-            src="https://m.media-amazon.com/images/I/614EuBf+udS._AC_SL1200_.jpg"
+            src="https://img.freepik.com/free-photo/yellow-plastic-tennis-racket-shuttlecock-blue-yellow-turquoise-desk_23-2148153947.jpg?size=626&ext=jpg&ga=GA1.1.2093528427.1639985653&semt=ais"
             alt="Image 1"
-            className="slider-image h-64"
+            className="slider-image h-96 p-3 "
           />
         </div>
-        <div>
+        <div className="bg-cyan-600 ">
           <img
-            src="https://m.media-amazon.com/images/I/71CzLCQnaOL.jpg"
+            src="https://img.freepik.com/free-photo/football-table-game_1232-2653.jpg?size=626&ext=jpg&ga=GA1.1.2093528427.1639985653&semt=ais"
             alt="Image 1"
-            className="slider-image h-64"
+            className="slider-image h-96 p-3 "
           />
         </div>
-        <div>
+        <div className="bg-cyan-600 ">
           <img
-            src="https://m.media-amazon.com/images/I/71lOhlB4S3S._SL1500_.jpg"
+            src="https://img.freepik.com/free-photo/various-sport-tools-grass_93675-128054.jpg?size=626&ext=jpg&ga=GA1.1.2093528427.1639985653&semt=ais"
             alt="Image 1"
-            className="slider-image h-64"
+            className="slider-image h-96 p-3 "
           />
         </div>
-        <div>
+        <div className="bg-cyan-600 ">
           <img
-            src="https://ae01.alicdn.com/kf/He3ba8323e42a4d2680282d1781598226J/GAN-Pyramid-M-Enhanced-Core-Positioning-GES-Magnetic-3x3x3-Speed-Cube-Stickerless-3x3-Magic-Cube-Puzzle.jpg_Q90.jpg_.webp"
+            src="https://img.freepik.com/free-photo/top-view-trucker-hat-with-exercise-equipment_23-2149410063.jpg?size=626&ext=jpg&ga=GA1.1.2093528427.1639985653&semt=ais"
             alt="Image 1"
-            className="slider-image h-64"
+            className="slider-image h-96 p-3 "
           />
         </div>
-        <div>
+        <div className="bg-cyan-600 ">
           <img
-            src="https://toybuzz.com.au/wp-content/uploads/2022/02/Intex-Action-Sports-Play-Centre-1.jpg"
+            src="https://img.freepik.com/free-photo/still-life-small-decorative-objects-with-vivid-colors_23-2149732875.jpg?size=626&ext=jpg&ga=GA1.2.2093528427.1639985653&semt=ais"
             alt="Image 1"
-            className="slider-image h-64"
-          />
-        </div>
-        <div>
-          <img
-            src="https://rukminim1.flixcart.com/image/416/416/jm9hfgw0/toy-sport/q/u/s/mke717727-football-kit-planet-of-toys-original-imaf97tfffenjfsf.jpeg?q=70"
-            alt="Image 1"
-            className="slider-image h-64"
+            className="slider-image h-96 p-3 "
           />
         </div>
       </Slider>
