@@ -74,7 +74,7 @@ const UpdateToys = () => {
         <div className="w-full text-center my-5">
           <input
             className="btn btn-primary "
-            value="Add your toy"
+            value="update toy"
             type="submit"
           />
         </div>

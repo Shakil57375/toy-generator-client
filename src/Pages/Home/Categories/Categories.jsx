@@ -4,9 +4,19 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const Categories = () => {
   const [activeToy, setActiveToy] = useState("cricket");
   const [toys, setToys] = useState([]);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+    });
+  }, []);
+
   useEffect(() => {
     fetch(`https://toy-generator-server.vercel.app/toys/${activeToy}`)
       .then((res) => res.json())
@@ -16,7 +26,7 @@ const Categories = () => {
     setActiveToy(tabName);
   };
   return (
-    <div className="mb-10">
+    <div data-aos='zoom-in' className="mb-10">
       <h3 className="text-5xl font-bold text-center font-Marcellus my-10">
         Search By Categories
       </h3>

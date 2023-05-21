@@ -1,6 +1,20 @@
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect} from "react";
+
+
+
 const Banner = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration:1200,
+    });
+  }, []);
+  
+
   return (
-    <div>
+    <div data-aos='zoom-in'>
       <div className="flex lg:flex-row flex-col-reverse  gap-10 items-center justify-between pb-10 px-6 md:pb-16 md:px-12 lg:px-10">
         <div className="w-full md:w-1/2 lg:w-5/12">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-Marcellus mb-4">
