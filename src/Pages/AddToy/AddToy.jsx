@@ -24,7 +24,7 @@ const AddToy = () => {
     })
     .then(res => res.json())
     .then(data => {
-      console.log(data)
+      // console.log(data)
       Swal.fire({
         position: 'center',
         icon: 'success',
@@ -36,9 +36,10 @@ const AddToy = () => {
   };
   return (
     <div data-aos='zoom-in'>
+      <h1 className = "text-5xl font-bold font-Marcellus text-center my-10">Admin Dashboard</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="my-5">
-        <label className="text-xl  font-semibold">Toy image url :</label>
+        <label className="text-lg font-Monstserrat font-semibold">Toy image url :</label>
           <input
             placeholder="Toys Photo URL"
             className="input mr-6 mt-2 input-bordered input-accent w-full"
@@ -47,7 +48,7 @@ const AddToy = () => {
         </div>
         <div className="flex justify-between gap-5 items-center">
           <div className="lg:w-1/2 w-full">
-            <label className="text-xl  font-semibold">Toy Name :</label>
+            <label className="text-lg font-Monstserrat font-semibold">Toy Name :</label>
             <input
               placeholder="Type here"
               className="input mt-2 mr-6 input-bordered input-accent w-full"
@@ -55,7 +56,7 @@ const AddToy = () => {
             />
           </div>
           <div className="lg:w-1/2 w-full">
-            <label className="text-xl  font-semibold">Seller Name :</label>
+            <label className="text-lg font-Monstserrat font-semibold">Seller Name :</label>
             <input
               placeholder="Type here"
               defaultValue={user?.displayName}
@@ -66,7 +67,7 @@ const AddToy = () => {
         </div>
         <div className="flex justify-between mt-3 gap-5 items-center">
           <div className="lg:w-1/2 w-full">
-            <label className="text-xl  font-semibold">Seller Email :</label>
+            <label className="text-lg font-Monstserrat font-semibold">Seller Email :</label>
             <input
               placeholder="Type here"
               defaultValue={user?.email}
@@ -75,7 +76,7 @@ const AddToy = () => {
             />
           </div>
           <div className="lg:w-1/2 w-full">
-            <label className="text-xl  font-semibold">Category :</label>
+            <label className="text-lg font-Monstserrat font-semibold">Category :</label>
             <select
               className="input mt-2 input-bordered input-accent w-full"
               {...register("category")}
@@ -90,7 +91,7 @@ const AddToy = () => {
         </div>
         <div className="flex justify-between mt-3 gap-5 items-center">
           <div className="lg:w-1/2 w-full">
-            <label className="text-xl  font-semibold">Price :</label>
+            <label className="text-lg font-Monstserrat font-semibold">Price :</label>
             <input
               placeholder="Type here"
               className="input mt-2 mr-6 input-bordered input-accent w-full"
@@ -98,7 +99,7 @@ const AddToy = () => {
             />
           </div>
           <div className="lg:w-1/2 w-full">
-            <label className="text-xl  font-semibold">Rating :</label>
+            <label className="text-lg font-Monstserrat font-semibold">Rating :</label>
             <input
               placeholder="Type here"
               className="input mt-2 mr-6 input-bordered input-accent w-full"
@@ -108,7 +109,7 @@ const AddToy = () => {
         </div>
         <div className="flex justify-between mt-3 gap-5 items-center">
           <div className="lg:w-1/2 w-full">
-            <label className="text-xl  font-semibold">Available quantity :</label>
+            <label className="text-lg font-Monstserrat font-semibold">Available quantity :</label>
             <input
               placeholder="Type here"
               className="input mt-2 mr-6 input-bordered input-accent w-full"
@@ -116,7 +117,7 @@ const AddToy = () => {
             />
           </div>
           <div className="w-full">
-            <label className="text-xl  font-semibold">Detail description :</label>
+            <label className="text-lg font-Monstserrat font-semibold">Detail description :</label>
             <textarea
               placeholder="Type here"
               className="input mt-2 mr-6 input-bordered input-accent w-full"

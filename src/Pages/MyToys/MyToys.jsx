@@ -48,6 +48,7 @@ const MyToys = () => {
   };
   return (
     <div data-aos='zoom-in'>
+      <h1 className = "text-5xl font-bold font-Marcellus text-center my-10">My Toys</h1>
       <div className="overflow-x-auto lg:w-full">
         <table className="table w-full">
           <thead>

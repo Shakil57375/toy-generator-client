@@ -67,7 +67,7 @@ const Register = () => {
           <form onSubmit={handleSignUp} className="card-body">
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Name</span>
+                <span className="font-Montserrat label-text">Name</span>
               </label>
               <input
                 type="text"
@@ -78,7 +78,7 @@ const Register = () => {
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Email</span>
+                <span className="font-Montserrat label-text">Email</span>
               </label>
               <input
                 type="text"
@@ -89,7 +89,7 @@ const Register = () => {
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Photo</span>
+                <span className="font-Montserrat label-text">Photo</span>
               </label>
               <input
                 type="URL"
@@ -100,7 +100,7 @@ const Register = () => {
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Password</span>
+                <span className="font-Montserrat label-text">Password</span>
               </label>
               <input
                 type="text"

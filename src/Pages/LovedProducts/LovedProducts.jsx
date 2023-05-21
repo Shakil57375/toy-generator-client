@@ -55,12 +55,12 @@ const LovedProducts = () => {
             </div>
           </div>
           <div className="px-4 py-3">
-            <h3 className="text-2xl font-bold text-center text-gray-900">
+            <h3 className="text-2xl font-bold text-center font-Montserrat font-Montserrat font-Montserrat text-gray-900">
               Best Badminton Rackets
             </h3>
             <div className="flex justify-center gap-2 items-center mt-2">
-              <span className="text-gray-600 text-sm line-through">$11.99</span>
-              <span className="text-cyan-600 text-sm font-semibold">$5.99</span>
+              <span className="text-gray-600 text-base font-Poppins line-through">$11.99</span>
+              <span className="text-cyan-600 text-base font-Poppins font-semibold">$5.99</span>
             </div>
           </div>
         </div>
@@ -78,12 +78,12 @@ const LovedProducts = () => {
             </div>
           </div>
           <div className="px-4 py-3">
-            <h3 className="text-2xl font-bold text-bold text-center text-gray-900">
+            <h3 className="text-2xl font-bold text-bold font-Montserrat text-center text-gray-900">
               Basketball
             </h3>
             <div className="flex justify-center gap-2 items-center mt-2">
-              <span className="text-gray-600 text-sm line-through">$15.99</span>
-              <span className="text-cyan-600 text-sm font-medium">$9.99</span>
+              <span className="text-gray-600 text-base font-Poppins line-through">$15.99</span>
+              <span className="text-cyan-600 text-base font-Poppins font-medium">$9.99</span>
             </div>
           </div>
         </div>
@@ -101,12 +101,12 @@ const LovedProducts = () => {
             </div>
           </div>
           <div className="px-4 py-3">
-            <h3 className="text-2xl font-bold text-center text-gray-900">
+            <h3 className="text-2xl font-bold text-center font-Montserrat font-Montserrat font-Montserrat text-gray-900">
               Football
             </h3>
             <div className="flex justify-center gap-2 items-center mt-2">
-              <span className="text-gray-600 text-sm line-through">$34.99</span>
-              <span className="text-cyan-600 text-sm font-semibold">
+              <span className="text-gray-600 text-base font-Poppins line-through">$34.99</span>
+              <span className="text-cyan-600 text-base font-Poppins font-semibold">
                 $29.99
               </span>
             </div>

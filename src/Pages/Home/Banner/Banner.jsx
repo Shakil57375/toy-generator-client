@@ -20,10 +20,10 @@ const Banner = () => {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-Marcellus mb-4">
           SportyKidz
           </h1>
-          <h2 className="text-lg md:text-xl lg:text-2xl font-semibold font-Marcellus  mb-4">
+          <h2 className="text-lg md:text-xl lg:text-2xl font-semibold text-cyan-600 font-Montserrat  mb-4">
             Find Your Perfect Sports Toy
           </h2>
-          <p className="font-Poppins text-base ">
+          <p className="font-Poppins text-base font-Poppins">
             Welcome to SportyKidz! We offer a wide range of sports toys
             for kids of all ages. Whether you are looking for soccer balls,
             basketball hoops, or tennis racquets, we have it all. Explore our

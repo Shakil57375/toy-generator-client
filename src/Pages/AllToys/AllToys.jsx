@@ -28,6 +28,7 @@ const AllToys = () => {
   };
   return (
     <div data-aos='zoom-in'>
+      <h1 className = "text-5xl font-bold font-Marcellus text-center my-10">All Toys Here </h1>
       <div className="w-full  text-center mb-5">
         <input
           onChange={(event) => setSearchName(event.target.value)}

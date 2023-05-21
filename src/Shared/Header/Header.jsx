@@ -16,12 +16,12 @@ const Header = () => {
     })
   }
     const items = <div className="flex flex-col lg:flex-row gap-5">
-        <Link className="text-lg text-gray-700" to="/">Home</Link>
-        <Link className="text-lg text-gray-700" to="/allToys">All Toys</Link>
-        <Link className="text-lg text-gray-700" to="/blogs">Blogs</Link>
+        <Link className="text-lg text-gray-700 font-Poppins" to="/">Home</Link>
+        <Link className="text-lg text-gray-700 font-Poppins" to="/allToys">All Toys</Link>
+        <Link className="text-lg text-gray-700 font-Poppins" to="/blogs">Blogs</Link>
         {
-          user?.email ? <><Link className="text-lg text-gray-700" to="/myToys">My Toys</Link>
-          <Link className="text-lg text-gray-700" to="/AddToy">Add a Toy</Link></> : <Link className="text-lg text-gray-700" to="/login">Login</Link>
+          user?.email ? <><Link className="text-lg text-gray-700 font-Poppins" to="/myToys">My Toys</Link>
+          <Link className="text-lg text-gray-700 font-Poppins" to="/AddToy">Add a Toy</Link></> : <Link className="text-lg text-gray-700 font-Poppins" to="/login">Login</Link>
         }
         
     </div>

@@ -1,6 +1,8 @@
+/* eslint-disable no-unused-vars */
 import { useContext, useEffect } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Swal from 'sweetalert2'
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { useTitle } from "../../CustomHook/CustomHook";
@@ -25,8 +27,13 @@ const Login = () => {
     handleLogin(email,password)
     .then(result =>{
         const user = result.user
-        alert("user logged in successfully")
-        console.log(user)
+        Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: "user logged in successfully",
+          showConfirmButton: false,
+          timer: 1500
+        })
         navigate(from, {replace : true});
     })
     .catch(error =>{
@@ -59,7 +66,7 @@ const Login = () => {
           <form onSubmit={handleSignIn} className="card-body">
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Email</span>
+                <span className="label-text font-Poppins">Email</span>
               </label>
               <input
                 type="text"
@@ -70,10 +77,10 @@ const Login = () => {
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Password</span>
+                <span className="label-text font-Poppins">Password</span>
               </label>
               <input
-                type="text"
+                type="password"
                 placeholder="password"
                 name="password"
                 className="input input-bordered"

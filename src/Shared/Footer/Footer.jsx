@@ -9,7 +9,7 @@ const Footer = () => {
       <footer className="footer p-10 bg-base-200">
         <div>
         <Link to="/"><img src="https://i.ibb.co/c6StNVR/sporty-Kids.png" alt="" className="w-20 h-16" /></Link>
-          <p className="text-base font-semibold">
+          <p className="text-base font-semibold font-Montserrat">
             SportyKidz Ltd.
             <br />
             Providing reliable toys for kids since 2012
@@ -17,32 +17,32 @@ const Footer = () => {
         </div>
         <div>
           <span className="footer-title">Company</span>
-          <Link className="text-lg text-gray-700" to="/">
+          <Link className="text-lg font-Poppins text-gray-700" to="/">
             Home
           </Link>
-          <Link className="text-lg text-gray-700" to="/allToys">
+          <Link className="text-lg font-Poppins text-gray-700" to="/allToys">
             All Toys
           </Link>
-          <Link className="text-lg text-gray-700" to="/blogs">
+          <Link className="text-lg font-Poppins text-gray-700" to="/blogs">
             Blogs
           </Link>
           {user?.email ? (
             <>
-              <Link className="text-lg text-gray-700" to="/myToys">
+              <Link className="text-lg font-Poppins text-gray-700" to="/myToys">
                 My Toys
               </Link>
-              <Link className="text-lg text-gray-700" to="/AddToy">
+              <Link className="text-lg font-Poppins text-gray-700" to="/AddToy">
                 Add a Toy
               </Link>
             </>
           ) : (
-            <Link className="text-lg text-gray-700" to="/login">
+            <Link className="text-lg font-Poppins text-gray-700" to="/login">
               Login
             </Link>
           )}
         </div>
         <div>
-          <span className="footer-title">Social</span>
+          <span className="footer-title font-Montserrat">Social</span>
           <div className="grid grid-flow-col gap-4">
             <a>
               <svg
@@ -80,8 +80,8 @@ const Footer = () => {
           </div>
         </div>
         <div>
-          <p className="footer-title">Visit Us</p>
-          <address>123 Cumilla City, Cumilla, State 12345, Bangladesh</address>
+          <p className="footer-title font-Montserrat">Visit Us</p>
+          <address className="font-Poppins">123 Cumilla City, Cumilla, State 12345, Bangladesh</address>
         </div>
       </footer>
     </div>

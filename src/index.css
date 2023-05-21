@@ -21,9 +21,5 @@
 
 
 .d-btn {
-    @apply bg-gradient-to-r from-teal-500 to-cyan-600 text-white transition duration-300 ease-in-out hover:bg-green-500;
-}
-
-.d-btn:hover {
-    @apply bg-gradient-to-r from-teal-500 to-cyan-600 text-white ;
+    @apply bg-gradient-to-r from-teal-500 font-Montserrat to-cyan-600 text-white transition duration-300 ease-in-out hover:bg-green-500;
 }
