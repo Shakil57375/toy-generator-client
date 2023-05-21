@@ -60,7 +60,7 @@ const Categories = () => {
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
         {toys.map((toy) => (
-          <div className="card relative w-full h-auto bg-base-100 shadow-xl">
+          <div key={toy._id} className="card relative w-full h-auto bg-base-100 shadow-xl">
             <figure>
               <img src={toy.image} className="w-56 h-60" alt="Shoes" />
             </figure>
