@@ -1,0 +1,13 @@
+- My project name is SportyKidz. It is a toy generator website you can post toy and update toy here.
+- I have seven section in my home section of my website navbar section, banner section, Gallery section, Search by category section, You will love this section, Testimonial section and at last a footer.
+    - navbar section that includes a logo in the left side and then some links home,All Toys, Blogs,(My Toys, Add a Toys) those are private routes. then I have login, register section login section is conditional if user logged in they will see logout but if user new to the website or not logged in they will see login link.
+    - banner section includes a banner which have a image and a text one side.
+    - My Gallery includes some relative picturers with my website
+    - After that I have the Categories section where user can search by categories.
+    - After that I have the You will love this section that includes some top rated products.
+    - After that I have the Testimonial where I have the buyer reviews
+- In my website I have allToys page which includes all toys have been added by the admins
+- In my website I have Blog section which includes some section
+- In my website I have a My Toys section which is a private route if user logged into the website they can see their added Toys if they logged out from the website they can't see their toys
+- In my website I have a add a toy website where a user can add their toys if they didn't logged in to the website they can add their toys wether they can't
+- Link Site Link : https://assignment-eleven-7252c.web.app/
